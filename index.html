@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Paint App with Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="paintCanvas"></canvas>
+        <div class="draggable-box" id="draggableBox">
+            <div class="h-sidebar">
+                <div class="top">
+
+                    <div id="dragButton" class="hide move dragButton">
+                        <div><img class="dragsize" src="./drag.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <p class="showColour">Colours</p>
+                    <div class="colours">
+                        <div class="box active" style="background-color: black"></div>
+                        <div class="box" style="background-color: white"></div>
+                        <div class="box" style="background-color: grey"></div>
+                        <div class="box" style="background-color: yellow"></div>
+                        <div class="box" style="background-color: pink"></div>
+                        <div class="box" style="background-color: red"></div>
+                        <div class="box" style="background-color: blue"></div>
+                        <div class="box" style="background-color: green"></div>
+                        <input style="width: 50px;" class="box setcol" type="color">
+                    </div>
+
+                    <div class="s-pen">
+                        <p class="showPens">Pen Size</p>
+                        <div class="pens">
+                            <input class="penRange" min="1" max="70" value="5" type="range">
+                        </div>
+                    </div>
+                    <div class="buttons">
+
+                        <button class="clearCanvas">Clear </button>
+                        <button class="undoLast">Undo </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

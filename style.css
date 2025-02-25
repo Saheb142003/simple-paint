@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-color: wheat;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#paintCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  cursor: crosshair;
+}
+
+.draggable-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  z-index: 5;
+}
+
+.sidebar {
+  min-width: 70px;
+  max-width: 180px;
+  border: 2px solid black;
+  border-radius: 0 0 10px 10px;
+  background-color: rgb(218, 218, 218);
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.sidebar p {
+  margin: 0;
+  background-color: aliceblue;
+}
+
+.box {
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.colours input {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.active {
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.h-sidebar {
+  position: relative;
+  /* display: flex; */
+  /* background-color: red; */
+  z-index: 5;
+  /* flex-direction: column; */
+}
+.top {
+  /* display: flex; */
+  position: relative;
+  background-color: red;
+
+  /* justify-content: right; */
+  /* align-items: flex-end; */
+}
+.dragsize {
+  height: 10px;
+}
+#dragButton {
+  position: absolute;
+  right: 0;
+}
+.hide {
+  position: relative;
+  border-radius: 10px;
+  height: 12px;
+  width: 25px;
+  background-color: rgb(218, 218, 218);
+  border: 2px solid black;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  border: 1px solid black;
+  height: 5px;
+  width: 5px;
+}
+
+.move {
+  cursor: grab;
+}
+
+.s-pen {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pens {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px auto;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  margin: 5px 0;
+  /* outline: none; */
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .draggable-box {
+    width: 100px;
+    height: auto;
+  }
+
+  .sidebar {
+    max-width: 150px;
+  }
+
+  .box {
+    height: 15px;
+    width: 15px;
+  }
+
+  .dragButton img {
+    width: 20px;
+    height: 20px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .draggable-box {
+    width: 80px;
+  }
+
+  .sidebar {
+    max-width: 120px;
+  }
+
+  .box {
+    height: 10px;
+    width: 10px;
+  }
+
+  .dragButton img {
+    width: 15px;
+    height: 15px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 4px;
+  }
+} */
+/* Ensure the draggable box maintains its appearance */
+.draggable-box {
+  width: 100px;
+  height: auto;
+  max-width: 150px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .draggable-box {
+    width: 80px;
+  }
+
+  .dragButton img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .draggable-box {
+    width: 70px;
+  }
+
+  .dragButton img {
+    width: 12px;
+    height: 12px;
+  }
+}
